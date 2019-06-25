@@ -9,7 +9,7 @@ COPY scripts/build.sh /tmp/build.sh
 COPY scripts/icecc-run.sh /usr/local/bin/icecc-run.sh
 
 RUN apt-get -y update && \
-  apt-get -y install build-essential autoconf git libtool libcap-ng-dev liblzo2-dev
+  apt-get -y install build-essential autoconf git libtool libcap-ng-dev liblzo2-dev libzstd-dev libarchive-dev
 
 RUN /tmp/build.sh
 RUN groupadd icecc && \
